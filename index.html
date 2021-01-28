@@ -68,13 +68,10 @@
                                         role="group" 
                                         aria-label="First group"
                                         @click='deleteTodo(index)'>
+                                        
                                         <button type="button" class="btn">
-                                            <i class="fas fa-minus text-danger"></i>
+                                            <i class="fas fa-trash text-danger"></i>
                                         </button>
-                                    </div>
-
-                                    <div class="btn-group m-0 p-0" role="group" aria-label="group">
-                                        <button type="button" class="btn"><i class="fas fa-redo-alt text-info"></i></button>
                                     </div>
                                
                                 </div>
@@ -106,21 +103,11 @@
                                 <div class="btn-toolbar clearfix" role="toolbar" aria-label="Toolbar with button groups">
                                     
                                     <div class="btn-group m-0 p-0 mr-2 " role="group" aria-label="First group">
-                                        <button type="button" class="btn"><i class="fas fa-check text-success"></i></button>
-                                    </div>
-                                    
-                                    <div 
-                                        class="btn-group m-0 p-0 mr-2" 
-                                        role="group" 
-                                        aria-label="First group"
-                                        @click='deleteTodo(index)'>
-                                        <button type="button" class="btn">
-                                            <i class="fas fa-minus text-danger"></i>
-                                        </button>
+                                        <button type="button" class="btn"><i class="fas fa-times text-danger"></i></button>
                                     </div>
 
-                                    <div class="btn-group m-0 p-0" role="group" aria-label="group">
-                                        <button type="button" class="btn"><i class="fas fa-redo-alt text-info"></i></button>
+                                    <div class="btn-group m-0 p-0" role="group" aria-label="group" @click='restoreTodo(index)'>
+                                        <button type="button" class="btn"><i class="fas fa-trash-restore text-info"></i></button>
                                     </div>
                                
                                 </div>

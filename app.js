@@ -6,7 +6,7 @@ let app = new Vue({
         textPlaceholder:'Add todo',
         textInput:'',
 
-        todos:['item 1', 'item 2'],
+        todos:['item 1', 'item 2', 'item 3', 'item 4'],
         todosEliminati:[]
     },
     methods: {
@@ -17,8 +17,15 @@ let app = new Vue({
         },
 
         deleteTodo:function(index){
+            console.log(index)
             this.todosEliminati.push(this.todos[index])
-            this.todos = this.todos.splice(index, 1);
+            this.todos.splice(index, 1);
+            console.log(index)
+        },
+
+        restoreTodo:function(index){
+            this.todos.push(this.todosEliminati[index])
+            this.todosEliminati.splice(index, 1);
         }
     },
 });
