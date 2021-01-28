@@ -20,7 +20,14 @@ let app = new Vue({
             console.log(index)
             this.todosEliminati.push(this.todos[index])
             this.todos.splice(index, 1);
-            console.log(index)
+        },
+
+        deleteAllTodo:function(){
+            this.todos.forEach(todo => {
+                this.todosEliminati.push(todo);
+            });
+
+            this.todos= [];
         },
 
         restoreTodo:function(index){
