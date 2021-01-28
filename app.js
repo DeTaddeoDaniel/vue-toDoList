@@ -6,23 +6,7 @@ let app = new Vue({
         textPlaceholder:'Add todo',
         textInput:'',
 
-        todos:[
-            {
-                testo: 'aaaaaaaaaaaaaaaaa',
-                stato: true,
-            },
-            {
-                testo: 'bbbbbbbbbbbbbbbbb',
-                stato: false,
-            },
-            {
-                testo: 'cccccccccccccccccc',
-                stato: false,
-            },{
-                testo: 'dddddddddddddddddd',
-                stato: true,
-            },
-        ],
+        todos:[],
         todosEliminati:[],
 
         editMode:false,

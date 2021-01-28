@@ -49,7 +49,7 @@
                         <h4>Todo item</h4>
                     </div>
                     
-                    <ul class='todos mb-2'>
+                    <ul class='todos mb-2' v-if='todos.length != 0'>
                         <li 
                             class="todo"
                             v-for="(todo, index) in todos">
@@ -90,6 +90,9 @@
 
                         </li>
                     </ul>
+
+                    <p class='messaggio' v-if='todos.length == 0'> Non ci sono todo <i class="far fa-smile"></i></p>
+
                 </div>
 
                 <!-- start item cestinati -->
@@ -99,7 +102,7 @@
                         <h4>Cestino</h4>
                     </div>
                     
-                    <ul class='todos mb-2'>
+                    <ul class='todos mb-2' v-if='todosEliminati.length != 0'>
                         <li 
                             class="todo completed"
                             v-for="(todo, index) in todosEliminati">
@@ -126,6 +129,9 @@
 
                         </li>
                     </ul>
+
+                    <p class='messaggio' v-if='todosEliminati.length == 0'> Cestino vuoto </p>
+                    
                 </div>
 
             <!-- end main -->

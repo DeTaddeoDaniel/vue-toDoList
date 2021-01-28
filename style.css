@@ -139,6 +139,20 @@ input:focus{
 }
 
 .completed{
-    text-transform: uppercase;
+    text-decoration: line-through;
+}
+
+.messaggio{
+    text-align: center;
+    color: brown;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.messaggio i{
+    text-align: center;
+    color: darkgreen;
+    font-size: 30px;
+    font-weight: bold;
 }
 
