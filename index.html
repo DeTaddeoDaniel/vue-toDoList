@@ -32,7 +32,11 @@
                             :placeholder="textPlaceholder"
                             @keyup.enter='addTodo'
                         >
-                        <button type="button" class="btn btn-success">Add</button>
+                        
+                        <button type="button" class="btn btn-success" @click='addTodo'>Add</button>
+                        <button type="button" class="btn btn-danger">Delete all</button>
+
+
                     </div>
 
                 <!-- end nav -->
