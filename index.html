@@ -89,6 +89,9 @@
                             </div>
 
                         </li>
+                        <li>
+                            <p>Numero di todo: {{numberTodo}}</p>
+                        </li>
                     </ul>
 
                     <p class='messaggio' v-if='todos.length == 0'> Non ci sono todo <i class="far fa-smile"></i></p>
@@ -104,10 +107,10 @@
                     
                     <ul class='todos mb-2' v-if='todosEliminati.length != 0'>
                         <li 
-                            class="todo completed"
+                            class="todo"
                             v-for="(todo, index) in todosEliminati">
                             
-                            <div class="alert alert-success mb-2 todo w-100" role="alert">
+                            <div class="alert alert-primary mb-2 todo w-100" role="alert">
                                 
                                 
                                 <div class="todo">
@@ -128,10 +131,11 @@
                             </div>
 
                         </li>
+                        <li><p>Numero di todo eliminati: {{numberTodoEliminati}}</p></li>
                     </ul>
 
                     <p class='messaggio' v-if='todosEliminati.length == 0'> Cestino vuoto </p>
-                    
+
                 </div>
 
             <!-- end main -->

@@ -74,6 +74,12 @@ let app = new Vue({
     },
 
     computed:{
+        numberTodo: function(){ 
+            return this.todos.length;
+        },
 
+        numberTodoEliminati: function(){ 
+            return this.todosEliminati.length;
+        }
     }
 });
