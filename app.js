@@ -42,14 +42,12 @@ let app = new Vue({
             this.editMode = !this.editMode;
             this.indexEdit = index;
             this.textPlaceholder = 'Edit todo'
-            this.textEditMode = this.todos[index];
+            this.textEditMode = this.todos[index].testo;
             document.getElementById('editPopup').style.display = 'flex'
         },
 
         SaveEditTodo:function(){
-            console.log(this.todos[this.indexEdit])
-            console.log(this.textEditMode)
-            this.todos[this.indexEdit] = this.textEditMode;
+            this.todos[this.indexEdit].testo = this.textEditMode;
             this.textEditMode = '';
             this.closeEditTodo();
         },
