@@ -26,6 +26,10 @@ let app = new Vue({
         restoreTodo:function(index){
             this.todos.push(this.todosEliminati[index])
             this.todosEliminati.splice(index, 1);
+        },
+
+        permanentlyRemoveTodo:function(index){
+            this.todosEliminati.splice(index, 1);
         }
     },
 });
