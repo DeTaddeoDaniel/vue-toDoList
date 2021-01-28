@@ -26,11 +26,13 @@
                 <nav class="nav">
                     <div class="box-input">
                         <input 
+                            class="mx-3"
                             type="text" 
                             v-model='textInput'
                             :placeholder="textPlaceholder"
                             @keyup.enter='addTodo'
                         >
+                        <button type="button" class="btn btn-success">Add</button>
                     </div>
 
                 <!-- end nav -->
@@ -38,25 +40,87 @@
 
                 <!-- start todos -->
                 <div>
-                    <ul class='todos'>
+                    
+                    <div class="text-center mt-3 pb-0">
+                        <h4>Todo item</h4>
+                    </div>
+                    
+                    <ul class='todos mb-2'>
                         <li 
                             class="todo"
-                            v-for="todo in todos">
+                            v-for="(todo, index) in todos">
                             
-                            <div class="alert alert-success my-1 todo w-100" role="alert">
+                            <div class="alert alert-success mb-2 todo w-100" role="alert">
+                                
                                 
                                 <div class="todo">
-                                    <p class="m-0 p-0">{{todo}}</p>
+                                    <p class="m-0 p-0">{{index}} ) {{ todo}}</p>
                                 </div>
 
                                 <div class="btn-toolbar clearfix" role="toolbar" aria-label="Toolbar with button groups">
                                     
                                     <div class="btn-group m-0 p-0 mr-2 " role="group" aria-label="First group">
-                                        <button type="button" class="btn"><i class="fas fa-check-circle text-success"></i></button>
+                                        <button type="button" class="btn"><i class="fas fa-check text-success"></i></button>
                                     </div>
                                     
+                                    <div 
+                                        class="btn-group m-0 p-0 mr-2" 
+                                        role="group" 
+                                        aria-label="First group"
+                                        @click='deleteTodo(index)'>
+                                        <button type="button" class="btn">
+                                            <i class="fas fa-minus text-danger"></i>
+                                        </button>
+                                    </div>
+
                                     <div class="btn-group m-0 p-0" role="group" aria-label="group">
-                                        <button type="button" class="btn"><i class="fas fa-minus-circle text-danger"></i></button>
+                                        <button type="button" class="btn"><i class="fas fa-redo-alt text-info"></i></button>
+                                    </div>
+                               
+                                </div>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- start item cestinati -->
+                <div>
+                    
+                    <div class="text-center mt-3 pb-0">
+                        <h4>Todo item eliminated</h4>
+                    </div>
+                    
+                    <ul class='todos mb-2'>
+                        <li 
+                            class="todo"
+                            v-for="(todo, index) in todosEliminati">
+                            
+                            <div class="alert alert-success mb-2 todo w-100" role="alert">
+                                
+                                
+                                <div class="todo">
+                                    <p class="m-0 p-0">{{index}} ) {{ todo}}</p>
+                                </div>
+
+                                <div class="btn-toolbar clearfix" role="toolbar" aria-label="Toolbar with button groups">
+                                    
+                                    <div class="btn-group m-0 p-0 mr-2 " role="group" aria-label="First group">
+                                        <button type="button" class="btn"><i class="fas fa-check text-success"></i></button>
+                                    </div>
+                                    
+                                    <div 
+                                        class="btn-group m-0 p-0 mr-2" 
+                                        role="group" 
+                                        aria-label="First group"
+                                        @click='deleteTodo(index)'>
+                                        <button type="button" class="btn">
+                                            <i class="fas fa-minus text-danger"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="btn-group m-0 p-0" role="group" aria-label="group">
+                                        <button type="button" class="btn"><i class="fas fa-redo-alt text-info"></i></button>
                                     </div>
                                
                                 </div>

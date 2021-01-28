@@ -41,12 +41,13 @@ nav{
 input{
     text-align: left;
     background: transparent; 
-    border: 0; 
+    border: 0;
+    border-bottom: 1px solid lightblue; 
     color: #fff; 
     height: 30px; 
     line-height: 30px;
     padding-left: 10px;
-    width: 100%;
+
 }
 
 input:focus{
@@ -77,4 +78,12 @@ input:focus{
 .todo .btn-toolbar button{
     padding: 0;
     font-size: 1.5rem;
+}
+
+.main{
+    background-color: rgb(253, 106, 21);
+}
+
+.main .todos{
+    padding: 10px;
 }
