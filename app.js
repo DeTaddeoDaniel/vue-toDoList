@@ -7,7 +7,11 @@ let app = new Vue({
         textInput:'',
 
         todos:['item 1', 'item 2', 'item 3', 'item 4'],
-        todosEliminati:[]
+        todosEliminati:[],
+
+        editMode:false,
+        textEditMode: '',
+        indexEdit: 0
     },
     methods: {
         addTodo:function(){
@@ -30,6 +34,29 @@ let app = new Vue({
             this.todos= [];
         },
 
+        editTodo:function(index){
+            this.editMode = !this.editMode;
+            this.indexEdit = index;
+            this.textPlaceholder = 'Edit todo'
+            this.textEditMode = this.todos[index];
+            document.getElementById('editPopup').style.display = 'flex'
+        },
+
+        SaveEditTodo:function(){
+            console.log(this.todos[this.indexEdit])
+            console.log(this.textEditMode)
+            this.todos[this.indexEdit] = this.textEditMode;
+            this.textEditMode = '';
+            this.closeEditTodo();
+        },
+
+        closeEditTodo:function(){
+            document.getElementById('editPopup').style.display = 'none'
+            this.editMode = !this.editMode;
+            this.textPlaceholder = 'Add todo';
+            this.indexEdit = 0;
+        },
+
         restoreTodo:function(index){
             this.todos.push(this.todosEliminati[index])
             this.todosEliminati.splice(index, 1);
@@ -39,4 +66,8 @@ let app = new Vue({
             this.todosEliminati.splice(index, 1);
         }
     },
+
+    computed:{
+
+    }
 });

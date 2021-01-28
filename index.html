@@ -67,7 +67,7 @@
                                         <button type="button" class="btn"><i class="fas fa-check text-success"></i></button>
                                     </div>
 
-                                    <div class="btn-group m-0 p-0 mr-2 " role="group" aria-label="First group">
+                                    <div class="btn-group m-0 p-0 mr-2 " role="group" aria-label="First group" @click='editTodo(index)'>
                                         <button type="button" class="btn"><i class="fas fa-edit text-info"></i></button>
                                     </div>
                                     
@@ -126,6 +126,24 @@
                 </div>
 
             <!-- end main -->
+            </div>
+
+            <div class="editPopup" id="editPopup">
+                <div class="content">
+                    <div class="header">Edit todo Item</div>
+                    <div class="body"> 
+                        <p>Scrivi il nuovo testo del todo</p>
+                        <input type="text" :placeholder='textPlaceholder' v-model="textEditMode"  @keyup.enter="SaveEditTodo">
+                    </div>
+                    <div class="footer">
+                        <button class="btn btn-danger" @click="closeEditTodo">
+                            <p>Indietro</p>
+                        </button>
+                        <button class="btn btn-success" @click="SaveEditTodo">
+                            <p>Salva</p>
+                        </button>
+                    </div>
+                </div>
             </div>
         
         <!-- fine container -->

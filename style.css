@@ -87,3 +87,60 @@ input:focus{
 .main .todos{
     padding: 10px;
 }
+
+.editPopup{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: none;
+}
+
+.editPopup .content{
+    max-width: 900px;
+    width: 80%;
+    border-radius: 20px;
+    background-color: rgba(69, 70, 73, 0.8);
+}
+
+.editPopup .header{
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding: 10px 20px;
+}
+
+.editPopup .body{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.editPopup .body input{
+    max-width: 500px;
+    background-color: rgb(5, 133, 122);
+    border: 0;
+    width: 100%;
+}
+
+.editPopup .footer{
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.editPopup .footer p{
+    margin: 0;
+}
+/* .<div class="editPopup">
+                <div class="content">
+                    <div class="header">Edit todo Item</div>
+                    <div class="body"></div>
+                    <div class="footer"></div>
+                </div>
+            </div> */
