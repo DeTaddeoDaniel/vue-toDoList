@@ -6,7 +6,23 @@ let app = new Vue({
         textPlaceholder:'Add todo',
         textInput:'',
 
-        todos:[],
+        todos:[
+            {
+                testo: 'aaaaaaaaaaaaaaaaa',
+                stato: true,
+            },
+            {
+                testo: 'bbbbbbbbbbbbbbbbb',
+                stato: false,
+            },
+            {
+                testo: 'cccccccccccccccccc',
+                stato: false,
+            },{
+                testo: 'dddddddddddddddddd',
+                stato: true,
+            },
+        ],
         todosEliminati:[],
 
         editMode:false,
@@ -44,6 +60,10 @@ let app = new Vue({
             this.textPlaceholder = 'Edit todo'
             this.textEditMode = this.todos[index].testo;
             document.getElementById('editPopup').style.display = 'flex'
+        },
+
+        changeStato:function(index){
+            this.todos[index].stato =! this.todos[index].stato;
         },
 
         SaveEditTodo:function(){

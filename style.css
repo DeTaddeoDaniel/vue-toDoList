@@ -137,10 +137,8 @@ input:focus{
 .editPopup .footer p{
     margin: 0;
 }
-/* .<div class="editPopup">
-                <div class="content">
-                    <div class="header">Edit todo Item</div>
-                    <div class="body"></div>
-                    <div class="footer"></div>
-                </div>
-            </div> */
+
+.completed{
+    text-transform: uppercase;
+}
+
