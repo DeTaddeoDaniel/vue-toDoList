@@ -6,22 +6,26 @@ let app = new Vue({
         textPlaceholder:'Add todo',
         textInput:'',
 
-        todos:['item 1', 'item 2', 'item 3', 'item 4'],
+        todos:[],
         todosEliminati:[],
 
         editMode:false,
         textEditMode: '',
         indexEdit: 0
     },
+
     methods: {
         addTodo:function(){
-            this.todos.push(this.textInput)
+            var todo = {
+                testo: this.textInput,
+                stato: false
+            };
+            this.todos.push(todo)
             this.textInput = '';
             console.log()
         },
 
         deleteTodo:function(index){
-            console.log(index)
             this.todosEliminati.push(this.todos[index])
             this.todos.splice(index, 1);
         },
