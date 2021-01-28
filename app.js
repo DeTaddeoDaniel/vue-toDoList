@@ -1,20 +1,18 @@
-let header = new Vue({
-    el:'#header',
+let app = new Vue({
+    el:'#app',
     data:{
         title:'Todo list',
-    }
-});
+        
+        textPlaceholder:'Add todo',
+        textInput:'',
 
-
-let nav = new Vue({
-    el:'#nav',
-    data:{
-        placeholderText:'Add todo',
-        textInput:''
+        todos:[],
     },
     methods: {
         addTodo:function(){
-
+            this.todos.push(this.textInput)
+            this.textInput = '';
+            console.log()
         }
     },
 });

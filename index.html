@@ -12,29 +12,47 @@
     <div id='app'>
 
         <!-- header vue -->
-        <div id="header">
+        <div class="header">
             <h1>{{title}}</h1>
         </div>
 
-    </div>
-    <div class="main">
+        <div class="main">
 
-        <!-- nav vue -->
-        <div id="nav">
-            <div class="input">
-                <input 
-                type="text" 
-                v-model='textInput'
-                :placeholder="placeholderText"
-                @keyup.enter='addTodo'
-                >
-                <p>{{textInput}}</p>
+            <!-- nav vue -->
+            <div class="nav">
+                <div class="input">
+                    <input 
+                        type="text" 
+                        v-model='textInput'
+                        :placeholder="textPlaceholder"
+                        @keyup.enter='addTodo'
+                    >
+                    <p>{{textInput}}</p>
+                </div>
+
+            <!-- end nav -->
             </div>
+
+            <!-- start todos -->
+            <div>
+                <ul class='todos'>
+                    <li 
+                        class="todo"
+                        v-for="todo in todos">
+                        <div class="todo">
+                            <div class="text">
+                                {{todo}}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        <!-- end main -->
         </div>
 
-        <div class="listTodo" #id='todos'></div>
-        <div class="listTodoFooter"'></div>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
