@@ -6,7 +6,8 @@ let app = new Vue({
         textPlaceholder:'Add todo',
         textInput:'',
 
-        todos:[],
+        todos:['item 1', 'item 2'],
+        todosEliminati:[]
     },
     methods: {
         addTodo:function(){

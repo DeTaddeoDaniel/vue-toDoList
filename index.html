@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo list</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
@@ -12,26 +13,25 @@
     <div id='app'>
 
         <!-- header vue -->
-        <div class="header">
+        <header>
             <h1>{{title}}</h1>
-        </div>
+        </header>
 
         <div class="main">
 
             <!-- nav vue -->
-            <div class="nav">
-                <div class="input">
+            <nav class="nav">
+                <div class="box-input">
                     <input 
                         type="text" 
                         v-model='textInput'
                         :placeholder="textPlaceholder"
                         @keyup.enter='addTodo'
                     >
-                    <p>{{textInput}}</p>
                 </div>
 
             <!-- end nav -->
-            </div>
+            </nav>
 
             <!-- start todos -->
             <div>
