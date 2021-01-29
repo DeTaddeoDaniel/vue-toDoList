@@ -38,6 +38,10 @@ let app = new Vue({
             this.todos= [];
         },
 
+        deleteAllTodoEliminati:function(){
+            this.todosEliminati= [];
+        },
+
         editTodo:function(index){
             this.editMode = !this.editMode;
             this.indexEdit = index;

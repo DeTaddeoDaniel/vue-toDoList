@@ -107,7 +107,8 @@
                     
                     <div class="text-center mt-3 pb-0">
                         <h4>Cestino</h4>
-                        <button type="button" class="btn btn-info" @click='restoreTodoAll'>restoreAll</button>
+                        <button type="button" class="btn btn-info" @click='restoreTodoAll'>Restore all</button>
+                        <button type="button" class="btn btn-danger" @click='deleteAllTodoEliminati'>Delete all</button>
                     </div>
                     
                     <ul class='todos mb-2' v-if='todosEliminati.length != 0'>
