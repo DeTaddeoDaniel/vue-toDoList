@@ -16,13 +16,27 @@ let app = new Vue({
 
     methods: {
         addTodo:function(){
-            var todo = {
-                testo: this.textInput,
-                stato: false
-            };
-            this.todos.push(todo)
-            this.textInput = '';
-            console.log()
+        
+            if(this.textInput.length > 4){
+                var todo = {
+                    testo: this.textInput,
+                    stato: false
+                };
+                this.todos.push(todo)
+                this.textInput = '';
+            } else {
+                alert('Almeno 4 caratteri')
+            }
+
+            // testing fast
+            // if(true){
+            //     var todo = {
+            //         testo: this.textInput,
+            //         stato: false
+            //     };
+            //     this.todos.push(todo)
+            //     this.textInput = '';
+            // }
         },
 
         deleteTodo:function(index){
