@@ -138,8 +138,17 @@ input:focus{
     margin: 0;
 }
 
+.state{
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
 .completed{
     text-decoration: line-through;
+}
+
+.completed .state{
+    color: darkgreen;
 }
 
 .messaggio{
