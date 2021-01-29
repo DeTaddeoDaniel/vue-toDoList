@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 body{
-    background-color: peru;
+    background-color: gray;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -81,7 +81,7 @@ input:focus{
 }
 
 .main{
-    background-color: rgb(253, 106, 21);
+    background-color: darkgray;
 }
 
 .main .todos{
@@ -165,3 +165,6 @@ input:focus{
     font-weight: bold;
 }
 
+div.alert:hover{
+    background-color: gray;
+}
