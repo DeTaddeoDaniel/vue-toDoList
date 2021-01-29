@@ -68,6 +68,14 @@ let app = new Vue({
             this.todosEliminati.splice(index, 1);
         },
 
+        restoreTodoAll:function(){
+            this.todosEliminati.forEach( todoEliminati => {
+                this.todos.push(todoEliminati);
+            })
+
+            this.todosEliminati = [];
+        },
+
         permanentlyRemoveTodo:function(index){
             this.todosEliminati.splice(index, 1);
         }
